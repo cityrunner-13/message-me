@@ -21,4 +21,8 @@
 $(document).on('turbolinks:load', function() {
   // enables dropdown
   $('.ui.dropdown').dropdown();
+  // allows flash message close icon to close message
+  $('.message .close').on('click', function() {
+    $(this).closest('.message').transition('fade');
+  });
 })
