@@ -26,3 +26,10 @@ $(document).on('turbolinks:load', function() {
     $(this).closest('.message').transition('fade');
   });
 })
+
+// Renders page without an HTTP request
+// $(docuemnt).ready(function(){
+//   $('#msg-lookup-form').on('ajax:complete', function(event, data, status){
+//     $('#results').html(data.responseText)
+//   })
+// })

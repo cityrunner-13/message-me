@@ -13,14 +13,16 @@
         </div>
       </div>
       <div class="extra content">
-        <form class="ui reply form">
+        <%= form_for(@message, html: {class: "ui reply form", role: "form"}, url: message_path) do |f| %>
+            <%# Renders for without HTTP request, put after "form" %>
+            <%# remote: true, method: :get, id: 'msg-lookup-form'}, :method=> 'post' %>
           <div class="field">
             <div class="ui fluid icon input">
-              <input type="text" placeholder="Enter message">
-              <i class="bordered inverted purple edit icon"></i>
+              <%= f.text_field :body %>
+              <%= f.button '<i class="bordered inverted purple edit icon"></i>'.html_safe %>
             </div>
           </div>
-        </form>
+        <% end %>
       </div>
     </div>
   </div>
