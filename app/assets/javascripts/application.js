@@ -22,8 +22,20 @@
 scroll_bottom = function() {
   if ($('#messages').length > 0) {
     $('#messages').scrollTop($('#messages')[0].scrollHeight);
-  }
-}
+  };
+};
+
+// Looks for enter key being pressed. Checks event keydown in function(e) and
+// if it matches 13 (the 'enter' keycode) click the button
+submit_message = function() {
+  $('#message_body').on('keydown', function(e) {
+    if (e.keyCode == 13) {
+      $('button').click();
+      // Removes the text from textbox after clicking enter
+      e.target.value = "";
+    };
+  });
+};
 
 // Waits for turbolinks and DOM to load before calling function
 $(document).on('turbolinks:load', function() {
@@ -33,8 +45,9 @@ $(document).on('turbolinks:load', function() {
   $('.message .close').on('click', function() {
     $(this).closest('.message').transition('fade');
   });
-  scroll_bottom()
-})
+  submit_message();
+  scroll_bottom();
+});
 
 
 

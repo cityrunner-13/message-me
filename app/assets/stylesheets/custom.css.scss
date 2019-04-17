@@ -10,6 +10,13 @@
   height: 450px;
 }
 
+// hides button from input bar
+.input {
+  button {
+    display: none;
+  }
+}
+
 h1.ui.header {
   padding-top: 15px;
 }
