@@ -17,6 +17,14 @@
 //= require semantic-ui
 //= require_tree .
 
+// Automatically scrolls to the bottom by the scroll height of the 0th element
+// of the messages
+scroll_bottom = function() {
+  if ($('#messages').length > 0) {
+    $('#messages').scrollTop($('#messages')[0].scrollHeight);
+  }
+}
+
 // Waits for turbolinks and DOM to load before calling function
 $(document).on('turbolinks:load', function() {
   // enables dropdown
@@ -25,9 +33,12 @@ $(document).on('turbolinks:load', function() {
   $('.message .close').on('click', function() {
     $(this).closest('.message').transition('fade');
   });
+  scroll_bottom()
 })
 
-// Renders page without an HTTP request
+
+
+// Renders page without an HTTP request or websocket
 // $(docuemnt).ready(function(){
 //   $('#msg-lookup-form').on('ajax:complete', function(event, data, status){
 //     $('#results').html(data.responseText)

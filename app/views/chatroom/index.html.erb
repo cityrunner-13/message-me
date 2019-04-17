@@ -6,14 +6,15 @@
 <div class="ui two column grid">
   <div class="twelve wide column">
     <div class="ui fluid raised card chatbox">
-      <div class="content">
-        <div class="ui feed">
+      <div class="content" id="messages">
+        <!-- id is called in coffeescript file to data is appended -->
+        <div class="ui feed" id="message-container">
           <!-- Calls messages partial -->
           <%= render @messages %>
         </div>
       </div>
       <div class="extra content">
-        <%= form_for(@message, html: {class: "ui reply form", role: "form"}, url: message_path) do |f| %>
+        <%= form_for(@message, html: {class: "ui reply form", role: "form"}, url: message_path, remote: true) do |f| %>
             <%# Renders for without HTTP request, put after "form" %>
             <%# remote: true, method: :get, id: 'msg-lookup-form'}, :method=> 'post' %>
           <div class="field">

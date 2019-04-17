@@ -1,5 +1,11 @@
 @import 'semantic-ui';
 
+// Adds scrollbar to message container nd raises messagebar a bit
+#messages {
+  height: 15em;
+  overflow: auto;
+}
+
 .chatbox {
   height: 450px;
 }
