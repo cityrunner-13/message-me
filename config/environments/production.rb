@@ -26,7 +26,6 @@ Rails.application.configure do
   config.assets.js_compressor = :uglifier
   config.assets.css_compressor = :sass
 
-  config.serve_static_assets = true
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
 
@@ -79,6 +78,13 @@ Rails.application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # Set the cable server's URI
+  config.web_socket_server_url = "wss://marc-messageme.herokuapp/cable"
+
+  # Action Cable can only accept WebSocket requests from specified origins.
+  # We need to pass those origins to the Action Cable server's configuration as an array.
+  config.action_cable.allowed_request_origins = ['https://marc-messageme.herokuapp.com', 'http://marc-messageme.herokuapp.com']
 
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
