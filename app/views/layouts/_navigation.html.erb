@@ -5,25 +5,14 @@
     <!-- <a href="<%= root_path %>" class="item">
       Chatroom
     </a> -->
-    <a class="item">
-      Messages
-    </a>
     <div class="right menu">
-      <div class="ui dropdown item">
-        Account <i class="dropdown icon"></i>
-        <div class="menu">
-          <% if !logged_in? %>
-            <%= link_to "Log In", login_path, class: "item" %>
-          <% else %>
-            <%= link_to "Log Out", logout_path, method: :delete, class: "item" %>
-          <% end %>
-        </div>
+      <div class="menu">
+        <% if !logged_in? %>
+          <%= link_to "Log In", login_path, class: "item" %>
+        <% else %>
+          <%= link_to "Log Out", logout_path, method: :delete, class: "item" %>
+        <% end %>
       </div>
-      <% if !logged_in? %>
-        <div class="item">
-            <%= link_to "Log In", login_path, class: "ui teal button" %>
-        </div>
-      <% end %>
     </div>
   </div>
 </div>
