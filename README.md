@@ -6,7 +6,16 @@ course on Udemy.
 It aims to create a real-time messaging application using Semantic UI
 and Websockets. Redis will also be utilized for deployment.
 
-Ruby 2.6.0
-Rails 5.2.3
+Clone with:
+
+`$ git clone git@github.com:marc-akbar/message-me.git`
+
+Ensure ruby `2.6.0` is installed:
+- RVM: `$ rvm install ruby-2.6.0`
+- ASDF: `$ asdf install ruby 2.6.0`
+
+Ensure dependencies are installed:
+
+`$ bundle install`
 
 URL: https://marc-messageme.herokuapp.com
