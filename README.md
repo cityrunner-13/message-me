@@ -1,7 +1,7 @@
 # README
 
-This is the message me app built from the Complete Ruby on Rails Developer
-course on Udemy.
+This is the message me app based off of the following project:
+https://github.com/udemyrailscourse/message_me
 
 It aims to create a real-time messaging application using Semantic UI
 and Websockets. Redis will also be utilized for deployment.
