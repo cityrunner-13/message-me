@@ -26,7 +26,29 @@ h2.ui.header {
 }
 
 body {
-  background: #ffffff;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left bottom, #ffffff, #B413EC);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left bottom, #ffffff, #B413EC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #e0a4f5;
+}
+
+label, button {
+  font-size: 1.1rem !important;
+}
+
+.ui.menu {
+  font-size: 1.25rem;
+}
+
+.ui.segment {
+  background-color: #e6e6e6;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  opacity: 1;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  opacity: 1;
 }
